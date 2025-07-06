@@ -33,6 +33,6 @@ A beginner-friendly and responsive **Sector-Wise Stock Market Dashboard** built 
 
 ### 📸 Preview
 
-![Dashboard Screenshot](preview.png) <!-- Replace with your actual image path -->
+![Dashboard Screenshot](preview.png) 
 
 
