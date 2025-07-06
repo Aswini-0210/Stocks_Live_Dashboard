@@ -23,14 +23,6 @@ A beginner-friendly and responsive **Sector-Wise Stock Market Dashboard** built 
 
 ---
 
-### 📂 Project Structure
-
-```
-📦 stock-market-dashboard/
-├── app.py               # Main dashboard code
-├── requirements.txt     # Python dependencies
-└── README.md            # Project overview
-
 ### 📸 Preview
 
 ![Dashboard Screenshot](preview.png) 
