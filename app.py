@@ -2,17 +2,14 @@ import streamlit as st
 import yfinance as yf
 import pandas as pd
 import plotly.express as px
+import time
 
+# Page config (default Streamlit theme)
 st.set_page_config(page_title="Stock Market Dashboard", layout="wide")
-st.markdown("""
-<style>
-.stApp { background-color: #0E1117; color: #FAFAFA; overflow: hidden; }
-[data-testid="stSidebar"] section[tabindex="0"] { height: 100vh; overflow-y: auto; }
-.small-text { font-size: 0.8em; margin-bottom: -10px; display: block; }
-</style>
-""", unsafe_allow_html=True)
+
 st.title("📈 Stock Market Dashboard")
 
+# --- Sector dictionary with display names (for sidebar) and tickers (for data)
 sectors = {
     "🌐 Overall Summary": [],
     "💻 Technology": [("Apple", "AAPL"), ("Microsoft", "MSFT"), ("Google", "GOOGL"), ("Meta", "META"), ("Oracle", "ORCL"), ("IBM", "IBM"), ("Intuit", "INTU"), ("Adobe", "ADBE"), ("AMD", "AMD"), ("NVIDIA", "NVDA")],
@@ -27,6 +24,7 @@ sectors = {
     "🛍️ Retail": [("DMart", "DMART.NS"), ("Trent", "TRENT.NS"), ("Shoppers Stop", "SHOPERSTOP.NS"), ("Future Retail", "FUTURERETAIL.NS"), ("Titan", "TITAN.NS"), ("V-Mart", "VMART.NS"), ("Varun Beverages", "VBL.NS"), ("Reliance Retail", "RELIANCERETAIL.NS"), ("Pantaloons", "PANTALOONS.NS"), ("Arvind", "ARVIND.NS")]
 }
 
+# Sidebar sector and display selection
 st.sidebar.subheader("🔍 Explore by Sector")
 selected_sector = st.sidebar.selectbox("Select Sector", list(sectors.keys()))
 company_list = sectors[selected_sector]
